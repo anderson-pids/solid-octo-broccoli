@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  terraform:
+    image: 'hashicorp/terraform:1.1.3'
+    volumes:
+      - ./src:/app
+    #   - ~/.ssh:/root/.ssh
+      - ~/.aws:/root/.aws
+    working_dir: '/app'
+    entrypoint: ""
